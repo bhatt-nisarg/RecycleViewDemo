@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/additem"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </ScrollView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/addboxlayout"
+        android:hint="@string/enter_item">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/addbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/additem"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@id/addboxlayout"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/white"
+        android:text="@string/add_item"
+        />
+
+</RelativeLayout>
